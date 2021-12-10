@@ -32,8 +32,8 @@ contract DAI {
 
     receive() external payable {}
 
-    function getBalance(address owner) public view returns (uint256) {
-        return daiToken.balanceOf(owner);
+    function getBalance(address addr) public view returns (uint256) {
+        return daiToken.balanceOf(addr);
     }
 
     function destroy() public onlyOwner {
