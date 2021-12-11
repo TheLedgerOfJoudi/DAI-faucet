@@ -28,11 +28,11 @@ describe("DAI contract", () => {
 
     describe("Withdrawal", () => {
         it("Should allow callers to withdraw", async () => {
-            console.log(caller.address)
+            //TODO: How to send a DAI to a dai.address
             prevBalance = await dai.getBalance(caller.address);
-            await dai.connect(caller).withdraw(1000000000000000000);
+            await dai.connect(caller).withdraw(ethers.utils.parseEther("1"));
             currentBalance = await dai.getBalance(caller.address);
-            expect(currentBalance).to.equal(prevBalance + 1000000000000000000);
+            expect(parseInt(currentBalance)).to.equal(parseInt(prevBalance) + parseInt(1000000000000000000));
         })
     })
 })

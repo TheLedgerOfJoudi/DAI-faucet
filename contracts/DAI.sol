@@ -3,7 +3,7 @@
 pragma solidity >=0.7.0 <0.9.0;
 
 interface DaiToken {
-    function transfer(address destination, uint256 ammount)
+    function transfer(address destination, uint256 amount)
         external
         returns (bool);
 
@@ -25,7 +25,6 @@ contract DAI {
     }
 
     function withdraw(uint256 amount) public {
-        //require (amount <= 0.1 ether);
         require(daiToken.balanceOf(address(this)) >= amount);
         daiToken.transfer(msg.sender, amount);
     }

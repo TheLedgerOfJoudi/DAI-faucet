@@ -17,7 +17,7 @@ module.exports = {
   networks: {
     rinkeby: {
       url: "", //Infura url with projectId
-      accounts: [
+      accounts: [""
       ] // add your rinkeby accounts here (private keys)
     },
   }
